@@ -45,10 +45,4 @@
 			background-image: url( 'assets/images/icons/check-green.svg?asset' );
 		}
 	}
-
-	.theme--night & {
-		i {
-			filter: invert( 100% ) hue-rotate( 180deg );
-		}
-	}
 }

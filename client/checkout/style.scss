@@ -3,27 +3,52 @@
 }
 
 .js-woopayments-copy-test-number {
-	line-height: 1.2em;
-	vertical-align: middle;
 	border-radius: 0;
 	border: none !important;
 	background-color: transparent;
-	padding: 3px;
+	font-weight: normal;
+	display: inline-flex;
+	cursor: pointer;
+	color: inherit;
+	font-size: initial;
+	padding: 2px 1px;
+	align-items: center;
+
+	span {
+		margin-right: 4px;
+	}
 
 	i {
-		display: inline-block;
-		width: 1.2em;
-		height: 1.2em;
-
+		display: block;
+		width: 16px;
+		height: 16px;
+		order: 1;
 		background: url( 'assets/images/icons/copy.svg?asset' ) no-repeat center;
 		background-size: contain;
 	}
 
 	&:hover {
 		background-color: transparent;
+		filter: invert( 0.3 );
+
+		i {
+			filter: invert( 0.3 );
+		}
 	}
 
 	&:active i {
 		transform: scale( 0.9 );
+	}
+
+	&.state--success {
+		i {
+			background-image: url( 'assets/images/icons/check-green.svg?asset' );
+		}
+	}
+
+	.theme--night & {
+		i {
+			filter: invert( 100% ) hue-rotate( 180deg );
+		}
 	}
 }
